@@ -109,23 +109,10 @@ def on_book(quote):
     #     signal = 0
 
         # Calculate signal
-    try:
-        sh_quote = CONTEXT.my_data['quotes'][sh_sym]    #rb1710
-        l_quote = CONTEXT.my_data['quotes'][l_sym]  #hc1705
-        # -------csun
 
-
-        spd =  (l_quote.last_px - sh_quote.last_px) - (l_quote.open_px - sh_quote.open_px)   #  hc - rb
-        CONTEXT.tick["px_20"].append(spd)
-        signal = (spd - CONTEXT.sma20) / CONTEXT.std20
-        CONTEXT.my_data['signal'] = signal
-        CONTEXT.signals.append(signal)
-        # a = CONTEXT.my_data['quotes']
-    except KeyError:
-        pass
-    except AttributeError:
-        pass
-
+        
+        
+        
 
 
     # Treshold = 2
